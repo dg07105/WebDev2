@@ -7,7 +7,8 @@
 
 <head>
 
-  <title>My Favorite #1</title>
+  <title>Sport</title>
+  <link rel="icon" type="favicon" href="https://iconifier.net/iconified/20211109044651_Soccer%20ball/favicon.ico">
 
   <!-- Meta -->
   <meta charset="utf-8">
@@ -41,19 +42,73 @@
     footer {
       font-size: 12px;
       text-align: center;
+      background-color: seagreen;
     }
 
-    #rainbow {
-      width: 100%;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
     }
 
-    h1 {
+    li {
+      float: left;
+      border-right: 1px solid #bbb;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+
+    li a {
+      display: block;
+      color: white;
       text-align: center;
-      background-color: black;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: purple;
     }
 
     body {
-      color: white;
+      background-image: url(../user22/images/blue-abstract-texture-vector-background-can-be-used-cover-design-book-design-poster-cd-cover-website-backgrounds-vector-151014745.jpg);
+      background-repeat: no-repeat;
+      background-size: 150%;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .table {
+      background-color: lightblue;
     }
   </style>
 </head>
@@ -62,7 +117,7 @@
   <!---------------------------------- Begin the nav-bar ------------->
   <menu>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
+      <a href="http://shakonet.isd720.com" class="navbar-brand">Sport</a>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -70,11 +125,11 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
           <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-          <a href="index.html" class="nav-item nav-link">Home</a>
-          <a href="Soccer.html" class="nav-item nav-link active">Soccer</a>
-          <a href="El Salvador.html" class="nav-item nav-link">El Salvador</a>
-          <a href="Lldm.html" class="nav-item nav-link">Lldm</a>
-          <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+          <li><a href="index.html" class="nav-item nav-link">Home</a>
+          <li><a href="Soccer.html" class="nav-item nav-link active">Soccer</a>
+          <li><a href="El Salvador.html" class="nav-item nav-link">El Salvador</a>
+          <li><a href="Lldm.html" class="nav-item nav-link">Lldm</a>
+            <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
         </div>
         <div class="navbar-nav ml-auto">
         </div>
@@ -85,81 +140,85 @@
 
   <main class="wideMargin">
 
-    <h1 class="text-left my-3 title" tabindex="0">My Favorite Images</h1>
+    <h1 class="text-left my-3 title" tabindex="0">My Favorite Sport</h1>
     <!-- Edit this line for the title of your page -->
 
     <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+    <h2>My Fav. Soccer Teams to Watch on TV</h2>
 
-    <div id="gallery">
-      <p>These are my Favorite Soccer Teams and Leagues</p>
-      <div class="container">
-        <div class="flipper">
-          <div class="front">
-            <img src="images/images.jpg" alt="images">
-          </div>
-          <div class="back">
-            <a href="https://www.google.com/search?q=soccer+teams&sxsrf=AOaemvLLsxsTt_UzEKj5VCbOX5DaXR9uNw:1634327034368&source=lnms&tbm=isch&sa=X&ved=2ahUKEwibztHSls3zAhWIXc0KHV9gAU0Q_AUoAXoECAEQAw&biw=1440&bih=692&dpr=2&safe=active&ssui=on#imgrc=5gbqWPOQwlU8mM"
-              target="_blank">
-              <h1>Teams</h1>
-            </a>
-            <p class="description">Real Madrid, Juventus, Man United, etc...</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="flipper">
-          <div class="front">
-            <img src="images/soccer-league-logos.jpg" height="150px" alt="soccer-league-logos">
-          </div>
-          <div class="back">
-            <a href="https://www.google.com/search?q=soccer+leagues&sxsrf=AOaemvLfnTxc3zB7W3MQ469Y5DhuW9bNnw:1634325570238&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjJkb6Ykc3zAhXIK80KHfA5AFIQ_AUoAnoECAIQBA&biw=1440&bih=692&dpr=2&safe=active&ssui=on#imgrc=SBHh42bUbzihHM"
-              target="_blank">
-              <h1>Leagues</h1>
-            </a>
-            <p class="description">Best and Exciting Leagues</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="flipper">
-          <div class="front">
-            <img src="images/football-youtube.jpg" height="150px" alt="football-youtube">
-          </div>
-          <div class="back">
-            <a href="https://www.google.com/search?q=youtube+soccer+videos&hl=en&biw=1440&bih=692&sxsrf=AOaemvKoADTk_po6yqYDgNlpnXFk9o377w%3A1634355377119&ei=sUhqYaztBpv0tAaMk5GQCA&oq=youtube+soccer+videos&gs_lcp=Cgdnd3Mtd2l6EAEYBTIECCMQJzIFCAAQkQIyBQgAEJECMgUIABCRAjIFCAAQkQIyBQgAEJECMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCCMQsAMQJzoHCAAQRxCwAzoGCAAQFhAeOggIABAIEA0QHkoECEEYAFDQHFi_MWDwS2gBcAJ4AIABpwGIAYMMkgEEMTMuM5gBAKABAcgBCcABAQ&sclient=gws-wiz&safe=active&ssui=on"
-              target="_blank">
-              <h1>Videos</h1>
-            </a>
-            <p class="description">Soccer Skills and Vines</p>
-          </div>
-        </div>
+    <div class="dropdown">
+      <img src="images/images (1).jpg" alt="images (1)" width="100" height="50">
+      <div class="dropdown-content">
+        <img src="images/images (1).jpg" alt="images (1)" height="100">
+        <div class="desc">Real Madrid, Juventus, Man United, etc...</div>
       </div>
     </div>
 
+    <h2>My Fav. Soccer Leagues to Watch</h2>
+    <div class="dropdown">
+      <img src="images/soccer-league-logos.jpg" alt="soccer-league-logos" width="100" height="100">
+      <div class="dropdown-content">
+        <img src="images/soccer-league-logos.jpg" alt="soccer-league-logos" height="200">
+        <div class="desc">MLS, Liga MX, La Liga, Serie A, etc...</div>
+      </div>
+    </div>
+
+
+    <div class="bs-example">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th># of Soccer Jersey</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Image of them</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>7</td>
+            <td style="color: rgb(18, 74, 164); background-color: greenyellow">Cristiano</td>
+            <td>Ronaldo</td>
+            <td><img src="images/CR7.jpg"></td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Guillermo</td>
+            <td style="color: black; background-color: yellow">Ochoa</td>
+            <td><img src="images/GO.jpg"></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td style="color: white; background-color: green">Karim</td>
+            <td>Benzema</td>
+            <td><img src="images/Real Madrid.jpg"></td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>Lionel</td>
+            <td style="color: white; background-color: blue">Messi</td>
+            <td><img src="images/Lionel M.jpg"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
   </main>
 
-  <!---------------------------------- Begin the footer ------------->
+  <!------------------------Begin the footer ------------->
   <footer>
     <span class="title">Social Media</span>
     <table id="footerTable">
-      <tr>
-        <td>
-          <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
-        </td>
-        <td>
-          <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
-        </td>
-        <td>
-          <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
-        </td>
-      </tr>
+      <center>
+        <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+
+        <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+
+        <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+      </center>
     </table>
   </footer>
-
-  <!---------------------------------- End the footer ------------->
+  <!-----------------------End the footer ------------->
 </body>
 
 </html>

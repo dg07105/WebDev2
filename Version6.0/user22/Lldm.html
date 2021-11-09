@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Version 6.0
-        Name:
-        Date Completed:
+        Name: David G 
+        Date Completed: 11-08-21
     -->
 
 <head>
 
-  <title>My Favorite #3</title>
+  <title>Church</title>
+  <link rel="icon" type="favicon" href="https://iconifier.net/iconified/20211109045518_lldm/favicon.ico">
 
   <!-- Meta -->
   <meta charset="utf-8">
@@ -41,18 +42,43 @@
     footer {
       font-size: 12px;
       text-align: center;
+      background-color: green;
     }
 
-    #rainbow {
-      width: 100%;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
     }
 
-    h1 {
-      text-align: center;
-      background-color: black;
+    li {
+      float: left;
+      border-right: 1px solid #bbb;
     }
-    body {
+
+    li:last-child {
+      border-right: none;
+    }
+
+    li a {
+      display: block;
       color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: purple;
+    }
+    .table {
+      background-color: lightblue;
     }
   </style>
 </head>
@@ -61,7 +87,7 @@
   <!---------------------------------- Begin the nav-bar ------------->
   <menu>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
+      <a href="http://shakonet.isd720.com" class="navbar-brand">Church</a>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -69,11 +95,11 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
           <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-          <a href="index.html" class="nav-item nav-link">Home</a>
-          <a href="Soccer.html" class="nav-item nav-link">Soccer</a>
-          <a href="El Salvador.html" class="nav-item nav-link">El Salvador</a>
-          <a href="Lldm.html" class="nav-item nav-link active">Lldm</a>
-          <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+          <li><a href="index.html" class="nav-item nav-link">Home</a>
+          <li><a href="Soccer.html" class="nav-item nav-link">Soccer</a>
+          <li><a href="El Salvador.html" class="nav-item nav-link">El Salvador</a>
+          <li><a href="Lldm.html" class="nav-item nav-link active">Lldm</a>
+            <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
         </div>
       </div>
       </div>
@@ -87,76 +113,50 @@
     <!-- Edit this line for the title of your page -->
 
     <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-
-    <div id="gallery">
-      <p>This is an image of where my family and I go to!</p>
-      <div class="container">
-        <div class="flipper">
-          <div class="front">
-            <img src="images/image of church.jpg" height="175px" alt="image of Church">
-          </div>
-          <div class="back">
-            <a href="https://www.google.com/search?q=lldm+guadalajara+church+images&tbm=isch&ved=2ahUKEwjPjvWzt9XzAhULBKwKHV-bCBcQ2-cCegQIABAA&oq=lldm+guadalajara+church+images&gs_lcp=CgNpbWcQA1DvEViQamCgbWgAcAB4AYAB1wmIAfopkgEQMC4xMy4yLjIuMS4xLjAuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=Ei5uYc-9DIuIsAXftqK4AQ&safe=active&ssui=on"
-              target="_blank">
-              <h1>Church</h1>
-            </a>
-            <p class="description">La Luz del Mundo describes itself as the restoration of primitive Christianity.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="flipper">
-          <div class="front">
-            <img src="images/Hynm Book.jpg" Height="175px" alt="Hynm Book">
-          </div>
-          <div class="back">
-            <a href="https://www.google.com/search?q=lldm+hymn+book+images&sxsrf=AOaemvKDO_BlXjhrH0pi3cDaNFlJH9n7Ug:1634610942964&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiFnuekuNXzAhXiY98KHQCdAsUQ_AUoAXoECAEQAw&biw=1440&bih=749&dpr=2&safe=active&ssui=on"
-              target="_blank">
-              <h1>Hynm Book</h1>
-            </a>
-            <p class="description">This is a song book which has numbered songs that we sing to God everyday!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="flipper">
-          <div class="front">
-            <img src="images/download-1.jpg" Height="175px" alt="download-1">
-            <img src="images/Brothers Code.jpg" Height="175px" alt="brothers code" </div>
-            <div class="back">
-              <a href="#" target="_blank">
-                <h1>Dress Code</h1>
-              </a>
-              <p class="description">Male members wear a nice and proper suit for Sunday Schhol and Service. Also,
-                Female members follow a dress code that includes long skirts and use head coverings during services.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
+    <div class="bs-example">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="images/image of church.jpg" style="width:400px;height:300px" alt="Church"></td> 
+            <td style="color: rgb(18, 74, 164); background-color: yellow">La Luz del Mundo describes itself as the restoration of primitive Christianity.</td>
+          </tr>
+          <tr>
+            <td><img src="images/Hynm Book.jpg" style="width:400px;height:300px" alt="Hynm Book"></td>
+            <td style="color: black; background-color: pink">This is a song book which has numbered songs that we sing to God everyday!</td>
+          </tr>
+          <tr>
+            <td><img src="images/Brothers Code.jpg" style="width:400px;height:300px" alt="Brothers Code"></td>
+            <td style="color: white; background-color: green">Male members wear a nice and proper suit for Sunday Schhol and Service.</td>
+          </tr>
+          <tr>
+            <td><img src="images/download-1.jpg" style="width:400px;height:300px" alt="download-1"></td>
+            <td style="color: white; background-color: blue">Also, Female members follow a dress code that includes long skirts and use head coverings during services.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
   </main>
-
-  <!---------------------------------- Begin the footer ------------->
+  <!----------------------Begin the footer ------------->
   <footer>
-    <span class="title">Example of a Footer Title</span>
+    <span class="title">Social Media</span>
     <table id="footerTable">
-      <tr>
-        <td>
-          <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
-        </td>
-        <td>
-          <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
-        </td>
-        <td>
-          <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
-        </td>
-      </tr>
+      <center>
+        <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+
+        <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+
+        <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+      </center>
     </table>
   </footer>
-  <!---------------------------------- End the footer ------------->
+  <!-----------------------End the footer ------------->
 </body>
 
 </html>

@@ -7,13 +7,14 @@
 
 <head>
 
-  <title>My Favorites</title>
+  <title>Index</title>
+  <link rel="icon" type="favicon" href="https://iconifier.net/iconified/20211109044324_Index/favicon.ico">
 
   <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="WebDev Version 4.0">
+  <meta name="description" content="WebDev Version .0">
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -41,18 +42,84 @@
     footer {
       font-size: 12px;
       text-align: center;
+      background-color: green;
     }
 
-    #rainbow {
-      width: 100%;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
     }
 
-    h1 {
-      text-align: center;
-      background-color: black;
+    li {
+      float: left;
+      border-right: 1px solid #bbb;
     }
-    body {
+
+    li:last-child {
+      border-right: none;
+    }
+
+    li a {
+      display: block;
       color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: purple;
+    }
+
+    body {
+      background-image: url(../user22/images/blue-abstract-texture-vector-background-can-be-used-cover-design-book-design-poster-cd-cover-website-backgrounds-vector-151014745.jpg);
+      background-repeat: no-repeat;
+      background-size: 150%;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .demo-content {
+      padding: 15px;
+      font-size: 18px;
+      background: #dbdfe5;
+      margin-bottom: 15px;
+    }
+
+    .demo-content.bg-alt {
+      background: #abb1b8;
+    }
+
+    .bs-example {
+      margin: 20px;
     }
   </style>
 </head>
@@ -61,100 +128,106 @@
   <!---------------------------------- Begin the nav-bar ------------->
   <menu>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
+      <a href="http://shakonet.isd720.com" class="navbar-brand">Favorites</a>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="collapse-navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
           <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-          <a href="index.html" class="nav-item nav-link active">Home</a>
-          <a href="Soccer.html" class="nav-item nav-link">Soccer</a>
-          <a href="El Salvador.html" class="nav-item nav-link">El Salvador</a>
-          <a href="Lldm.html" class="nav-item nav-link">Lldm</a>
-          <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+          <li><a href="index.html" class="nav-item nav-link active">Home</a>
+          <li><a href="Soccer.html" class="nav-item nav-link">Soccer</a>
+          <li><a href="El Salvador.html" class="nav-item nav-link">El Salvador</a>
+          <li><a href="Lldm.html" class="nav-item nav-link">Lldm</a>
+            <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
         </div>
-        <div class="navbar-nav ml-auto">
-        </div>
+        <div class="navbar-nav ml-auto"></div>
+      </div>
       </div>
     </nav>
   </menu>
   <!---------------------------------- End the nav-bar ------------------------------------->
 
   <main class="wideMargin">
-
-    <h1 class="text-left my-3 title" tabindex="0">This is My Website Intro</h1>
     <!-- Edit this line for the title of your page -->
 
     <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
+    <h1>My Intro Page</h1>
+    <figure>
+      <img src="images/Photo of the Capital.png" height="500 px" alt="Photo of the Capital" style="width:100%">
+      <figcaption>Image of El Salvador</figcaption>
+    </figure>
 
-    <div id="gallery">
-      <p></p>
-      <div class="container">
-        <div class="flipper">
-          <div class="front">
-            <img src="images/44267941.jpg" height="200px" alt="44267941">
-          </div>
-          <div class="back">
-            <a href="https://www.google.com/search?q=image+of+family+of+5+cartoon&sxsrf=AOaemvLhN5DgdWCktjFnxaX6Ry0vEZP-DQ:1634356327482&tbm=isch&source=iu&ictx=1&fir=eK4cBt8pK5-RHM%252Cj3SvhoptpRcOiM%252C_%253BwRmGsUoEbe1hQM%252Cj3SvhoptpRcOiM%252C_%253BlcTyc3mK5PL7zM%252CvDOBrqtJP5GoRM%252C_%253BR9wJSsBMZmLpuM%252Ch1cniJCXBbc0_M%252C_%253BtcXX_zHKI3txiM%252Cj3SvhoptpRcOiM%252C_%253BlPFQJIqVDrBB8M%252Cj3SvhoptpRcOiM%252C_%253BiDMjanxeK779uM%252C3zG6hMFQjrwrWM%252C_%253BjmEamn5Yp6ZMBM%252Cp9MF3zCRPHGv7M%252C_%253BOCNeSD_3VsQOWM%252Cj3SvhoptpRcOiM%252C_%253BMkP3YcXaf7J-SM%252CpFkS2pkKtBeanM%252C_%253Bb1ZveL33mLwkZM%252CBjcoLu63-hw7sM%252C_%253BIbA9PQLo8gvtbM%252ClRqWImv2M2tapM%252C_%253BMRMw83UYwR605M%252CnD6bVidTRfVkzM%252C_%253BXtTUPmQLSYmmaM%252C4EFxKtvGYucpSM%252C_%253BSF8ZxnaCTOVq_M%252Cj3SvhoptpRcOiM%252C_&vet=1&usg=AI4_-kT-TFMt-z2UWf_p_r3UlpM89YeWQg&sa=X&ved=2ahUKEwiHuNfig87zAhXPHM0KHYXxAnYQ9QF6BAgLEAE&biw=1440&bih=692&dpr=2&safe=active&ssui=on#imgrc=fEdQ5qigq6YupM"
-              target="_blank">
-              <h1>My Family</h1>
-              <a>
-                <p class="description">Activites that Me and My Family Do!</p>
-          </div>
+    <div class="container mt-3">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">
+          <i class="fa fa-home"></i> Home
+        </a>
+        <a href="https://www.google.com/search?q=Soccer+competitions&sxsrf=AOaemvIuDSUWmxXUGhZnSlF372qnAxbIJw:1633706482637&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiT4cH0jrvzAhWdlWoFHcMFCF4Q_AUoAXoECAEQAw&biw=1440&bih=747&dpr=2&safe=active&ssui=on"
+          target="_blank" class="list-group-item list-group-item-action">
+          <i class="fa fa-futbol-o" aria-hidden="true"></i> Pictures <span
+            class="badge badge-pill badge-primary pull-right">100</span>
+        </a>
+
+        <a href="https://www.pandora.com/" target="_blank" class="list-group-item list-group-item-action">
+          <i class="fa fa-headphones" aria-hidden="true"></i> Music <span
+            class="badge badge-pill badge-primary pull-right">100</span>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" class="list-group-item list-group-item-action">
+          <i class="fa fa-youtube" aria-hidden="true"></i>Videos <span
+            class="badge badge-pill badge-primary pull-right">100</span>
+        </a>
+        </a>
+        <a href="https://www.google.com/search?q=paises+de+banderas&safe=active&ssui=on" target="_blank"
+          class="list-group-item list-group-item-action">
+          <i class="fa fa-flag" aria-hidden="true"></i> Flags <span
+            class="badge badge-pill badge-primary pull-right">100</span>
+        </a>
+
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="demo-content">Look at this cool image I found</div>
+        </div>
+        <div class="col-md-8">
+          <div class="demo-content bg-alt"> <img src="images/Photo of the Capital.png" height="200px"
+              alt="Photo of the Capital"></div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="flipper">
-          <div class="front">
-            <img src="images/Culture-circle.jpg" height="200px" alt="Culture-circle">
-          </div>
-          <div class="back">
-            <a href="https://www.google.com/search?q=Culture+images&sxsrf=AOaemvKc1BeG55X8jMvkAuW1dVySKs3f9g:1634431450127&tbm=isch&source=iu&ictx=1&fir=wazeIgKvQX5dXM%252CsDVJ3v_SDmYJXM%252C_%253BuajeHfT8kvsAsM%252CsDVJ3v_SDmYJXM%252C_%253Bqj5hmvob0u7iUM%252Cn_WWjkOU-FmztM%252C_%253BKv0FRTdo_4jmWM%252CZbJo8RbDF8wNTM%252C_%253Be8ZxQr4RaSLctM%252CvHwt1V3D2vIXmM%252C_%253BBC3Bldmr3qTDtM%252CnrjVKuE8t68cAM%252C_%253BR9Zf1WQOpVPYXM%252CHMN98xPar0rcoM%252C_%253BNFxyOw4-gJrJwM%252C8UDJQoo-uhEJLM%252C_%253BPnn9tgvECLjBsM%252CfKMXjUZ_d8VblM%252C_%253BIXlw_W-GuYqGiM%252CsDVJ3v_SDmYJXM%252C_%253Bv-iaVlih1p6qgM%252C9NSK-zmu46ilKM%252C_%253BnOWp1EPhwlC1gM%252CKUNEh3fwpAq_PM%252C_%253BqMlsuxKriqhdcM%252CQFZFWaT_xrdmRM%252C_%253BfYNGdP4MH7rbQM%252Cn_WWjkOU-FmztM%252C_&vet=1&usg=AI4_-kTjx_bncSRVn3cBJGzx5cc7XXQPcA&sa=X&ved=2ahUKEwj_6fnPm9DzAhWMLs0KHW8rDQcQ9QF6BAgSEAE&safe=active&ssui=on#imgrc=hP_fc_qKbp3OmM"
-              target="_blank">
-              <h1>Culture</h1>
-            </a>
-            <p class="description">About El Salvador</p>
-          </div>
+      <!--Row with two columns divided in 1:3 ratio-->
+      <div class="row">
+        <div class="col-md-3">
+          <div class="demo-content bg-alt"> <img src="images/Multicultural-character.jpg" height="310px"
+              alt="Multicultural-character"></div>
+        </div>
+        <div class="col-md-9">
+          <div class="demo-content bg-alt"> <img src="images/family of 5.jpg" height="242px" alt="family of 5"></div>
         </div>
       </div>
 
-      <div class="container">
-        <div class="flipper">
-          <div class="front">
-            <img src="images/image of church.jpg" height="200px" alt="images of church">
-          </div>
-          <div class="back">
-            <a href="https://www.google.com/search?q=lldm+shakopee+church+images&sxsrf=AOaemvIWCbRElvyRsZYVvtX5kBZ9VyueBA:1634434913754&tbm=isch&source=iu&ictx=1&fir=7DZ-BXPrY8eDHM%252C02NO0mYhCuvweM%252C_%253B4q82eWzoeenA1M%252CPR65gLmAMaENvM%252C_%253BFAtRv6C87vEK-M%252CuiDkj6DF8ooN4M%252C_%253BuoJdRxVX9xsEiM%252CnAjwo8BPAWGshM%252C_%253BhbV7iZPwbIcASM%252CPR65gLmAMaENvM%252C_%253Bj7Blo5WFtojIHM%252CdMqem-J8fRB0PM%252C_%253B-0tTgYIrsf-aHM%252CS4yUe_qi5lDCBM%252C_%253BfjBGS3cH8SG_XM%252C9dBvtIowEwYCUM%252C_%253BvT7oIqmezzQytM%252C9dBvtIowEwYCUM%252C_%253BAet_TuYo4xF6nM%252CUz36byUl2RRUYM%252C_&vet=1&usg=AI4_-kQREVE1173xWXJE1k82RfAbc5ShSQ&sa=X&ved=2ahUKEwjI4cTDqNDzAhW-mmoFHeQ8C1MQ9QF6BAgIEAE&safe=active&ssui=on#imgrc=Lget5kYOMj320M"
-              target="_blank">
-              <h1>Church (TLOTW) The Light of the World</h1>
-            </a>
-            <p class="description">Prayers: 5:00 am, 9:00am, & 6:30pm</p>
-          </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="demo-content bg-alt"> <img src="images/Painting.jpg" height="300px" alt="Painting"></div>
         </div>
-      </div>
-    </div>
 
-    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
+
+        <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
   </main>
+
 
   <!---------------------------------- Begin the footer ------------->
   <footer>
     <span class="title">Social Media</span>
     <table id="footerTable">
-      <tr>
-        <td>
-          <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
-        </td>
-        <td>
-          <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
-        </td>
-        <td>
-          <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
-        </td>
-      </tr>
+      <center>
+        <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+
+        <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+
+        <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+      </center>
     </table>
   </footer>
   <!---------------------------------- End the footer ------------->

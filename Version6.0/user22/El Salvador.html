@@ -7,7 +7,8 @@
 
 <head>
 
-    <title>My Favorite #2</title>
+    <title>Pais</title>
+    <link rel="icon" type="favicon" href="https://iconifier.net/iconified/20211109044127_el-salvador-flag/favicon.ico">
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -40,20 +41,144 @@
 
         footer {
             font-size: 12px;
+            text-align: left;
+            background-color: green;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: purple;
+        }
+
+        body{
+            background-image: url(../user22/images/background\ color\ image.jpeg);
+            background-repeat: no-repeat;
+            background-size: 115%; 
+        }
+
+        #gallery {
+            font-family: "Orbitron", sans-serif;
+            line-height: 1.5em;
             text-align: center;
         }
 
-        #rainbow {
+        .container-card {
+            display: inline-block;
+            margin: 2%;
+            perspective: none;
+        }
+
+        .flipper {
+            position: relative;
+            transition: 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .front, .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 320px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            backface-visibility: hidden;
+        }
+
+        .front {
+            z-index: 2;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+        }
+
+        img {
             width: 100%;
         }
 
-        h1 {
-            text-align: center;
-            background-color: black;
+        .container-card, .front, .back {
+            width: 250px;
+            height: 320px;
         }
+
+        .container-card:hover .flipper {
+            transform: rotateY(180deg);
+        }
+
+        a {
+            color: blue;
+        }
+
+        .caption, .back h1 {
+            font-family: "Orbitron", sans-serif;
+            font-size: 1.7em;
+            padding: 10px 10px 0 10px;
+            margin: 0;
+            text-align: center;
+        }
+
+        p.caption {
+            position: absolute;
+            bottom: 1vh;
+        }
+
+        .description {
+            font-size: 0.9em;
+            padding: 0 20px 20px 20px;
+            text-align: left;
+            background-color: greenyellow;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-      color: white;
-    }
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Float four columns side by side */
+        .container-card {
+            float: left;
+            width: 25%;
+            padding: 0 10px;
+        }
+
+        /* Clear floats after the columns */
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
     </style>
 
 </head>
@@ -62,7 +187,7 @@
     <!---------------------------------- Begin the nav-bar ------------->
     <menu>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a href="http://shakonet.isd720.com" class="navbar-brand">WebDev</a>
+            <a href="http://shakonet.isd720.com" class="navbar-brand">Pais</a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -70,11 +195,11 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Edit These Items in your Menu ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="Soccer.html" class="nav-item nav-link">Soccer</a>
-                    <a href="El Salvador.html" class="nav-item nav-link active">El Salvador</a>
-                    <a href="Lldm.html" class="nav-item nav-link">Lldm</a>
-                    <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
+                    <li><a href="index.html" class="nav-item nav-link">Home</a>
+                    <li><a href="Soccer.html" class="nav-item nav-link">Soccer</a>
+                    <li><a href="El Salvador.html" class="nav-item nav-link active">El Salvador</a>
+                    <li><a href="Lldm.html" class="nav-item nav-link">Lldm</a>
+                        <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Edit These Items in your Menu ↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
                 </div>
             </div>
         </nav>
@@ -87,77 +212,82 @@
         <!-- Edit this line for the title of your page -->
 
         <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Put your content below this line ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-
         <div id="gallery">
-            <p>This is where my family is from!!!</p>
-            <div class="container">
+            <p>Hover over the images to get the answer</p>
+            <div class="container-card">
                 <div class="flipper">
                     <div class="front">
-                        <img src="images/el-salvador-flag.jpg" height="200px" alt="el-salvador-flag" </div>
-                        <div class="container">
-                            <a href="https://www.google.com/search?q=flag+of+el+salvador&sxsrf=AOaemvL9EhXA-P07JJBQYNyNgELH8xp0Zw:1634440664999&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiU5_j5vdDzAhV7kmoFHTVJAjcQ_AUoAXoECAEQAw&biw=1478&bih=749&dpr=2&safe=active&ssui=on"
-                                target="_blank">
-                                <h1>FLag</h1>
-                            </a>
-                            <p class="description">The flag is a patriotic symbol where my parents and my two sisters
-                                are from!!!</p>
-                            </p>
-                        </div>
+                        <img src="images/el-salvador-flag.jpg" height="230px" alt="el-salvador-flag">
                     </div>
-                </div>
-                <div class="container">
-                    <div class="flipper">
-                        <div class="front">
-                            <img src="images/download.jpg" height="200px" alt="download">
-                        </div>
-                        <div class="back">
-                            <a href="https://www.google.com/search?q=salvadoran+food+&tbm=isch&ved=2ahUKEwj-pJqwvdDzAhVJf6wKHYn0CoIQ2-cCegQIABAA&oq=salvadoran+food+&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIECAAQHjoHCCMQ7wMQJzoECAAQQ1DaKliVNmDceWgAcAB4AIABT4gBhASSAQE3mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=PpVrYf6NFcn-sQWJ6auQCA&bih=749&biw=1463&hl=en&safe=active&ssui=on"
-                                target="_blank">
-                                <h1>Food</h1>
-                            </a>
-                            <p class="description">It has been the best food I've ever tried so far. I invite you to try
-                                it.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="flipper">
-                        <div class="front">
-                            <img src="images/Popular Dance.jpg" height="200px" alt="Popular Dance">
-                        </div>
-                        <div class="back">
-                            <a href="https://www.google.com/search?q=culture+of+el+salvador&sxsrf=AOaemvIZ29VSNmaWRE1Wt0VVr6jL3vEuNg:1634441386639&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjCsYbSwNDzAhWXQc0KHbrzCZcQ_AUoAXoECAEQAw&cshid=1634441410006161&biw=1478&bih=749&dpr=2&safe=active&ssui=on#imgrc=xqcaQhT2s9t6yM"
-                                target="_blank">
-                                <h1>Culture</h1>
-                            </a>
-                            <p class="description">This is one of the famous things about of El Salvador</p>
-                        </div>
+                    <div class="back">
+                        <a href="https://www.google.com/search?q=flag+of+el+salvador&sxsrf=AOaemvI5ECVFsAlJlX-zqgT_0vl46kKw8g:1636388672163&source=lnms&tbm=isch&sa=X&ved=2ahUKEwja35Lslon0AhUQQ80KHSkWAgYQ_AUoAXoECAEQAw&biw=1440&bih=789&dpr=2&safe=active&ssui=on" target="_blank">
+                            <h1>Bandera</h1>
+                        </a>
+                        <p class="description">This sorting symbolizes the sky, peace and the ocean, dividing the flag horizontally into three equal parts. The blue color in the flag represents the sky and the two great oceans of Central America.</p>
                     </div>
                 </div>
             </div>
 
-            <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
-    </main>
+            <div id="gallery">
+                <div class="container-card">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="images/download.jpg" height="230px" alt="download">
+                        </div>
+                        <div class="back">
+                            <a href="https://www.google.com/search?q=food+de+el+salvador&sxsrf=AOaemvL-y9T_GMDwLoq7Z11tsM8McT2Opw:1636397731771&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjSl43MuIn0AhXUU80KHSPiBqIQ_AUoAnoECAEQBA&biw=1440&bih=789&dpr=2&safe=active&ssui=on" target="_blank">
+                                <h1>Food</h1>
+                            </a>
+                            <p class="description">It has been the best food I've ever tried so far. I invite you to try it.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <!---------------------------------- Begin the footer ------------->
-    <footer>
-        <span class="title">Social Media</span>
-        <table id="footerTable">
-            <tr>
-                <td>
-                    <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
-                </td>
-                <td>
-                    <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
-                </td>
-                <td>
-                    <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
-                </td>
-            </tr>
-        </table>
-    </footer>
-    <!---------------------------------- End the footer ------------->
+                <div id="gallery">
+                    <div class="container-card">
+                        <div class="flipper">
+                            <div class="front">
+                                <img src="images/Popular Dance.jpg" height="230px" alt="Popular Dance">
+                            </div>
+                            <div class="back">
+                                <a href="https://www.google.com/search?q=culture+of+el+salvador&sxsrf=AOaemvIZ29VSNmaWRE1Wt0VVr6jL3vEuNg:1634441386639&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjCsYbSwNDzAhWXQc0KHbrzCZcQ_AUoAXoECAEQAw&cshid=1634441410006161&biw=1478&bih=749&dpr=2&safe=active&ssui=on#imgrc=xqcaQhT2s9t6yM" target="_blank">
+                                    <h1>Culture</h1>
+                                </a>
+                                <p class="description">This is one of the famous things about of El Salvador</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="gallery">
+                        <div class="container-card">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="images/Stadium.jpg" height="230px" alt="Stadium">
+                                </div>
+                                <div class="back">
+                                    <a href="https://www.google.com/search?q=Estadio+Cuscatl%C3%A1n&stick=H4sIAAAAAAAAAONgVuLUz9U3sKwwKk57xGjCLfDyxz1hKe1Ja05eY1Tl4grOyC93zSvJLKkUEudig7J4pbi5ELp4FrEKuRaXJKZk5is4lxYnJ5bkHF6YBwDKdWaaWQAAAA&sxsrf=AOaemvLa94Pbu7HO7lnnD2eFyKQkKCkG2Q:1636404875771&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjkndCa04n0AhXBHc0KHTu7DKUQ_AUoAnoECAEQBA&biw=1440&bih=789&dpr=2&safe=active&ssui=on" target="_blank">
+                                        <h1>Stadium</h1>
+                                    </a>
+                                    <p class="description">The Estadio Cuscatlán is a football stadium located in San Salvador, El Salvador. It is the largest stadium in Central America with a capacity of 53,400. The stadium is the home ground of the El Salvador national football team and Alianza F.C.</p>
+                                </div>
+                            </div>
+                        </div>
+ <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Make sure all your content is above this line ↑↑↑↑↑↑↑↑↑-->
+</main>
+<!----------------------Begin the footer ------------->
+<footer>
+    <span class="title">Social Media</span>
+    <table id="footerTable">
+      <center>
+        <i class="fa fa-facebook fa-3x" aria-hidden="true"></i>
+
+        <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+
+        <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+      </center>
+    </table>
+  </footer>
+  <!-----------------------End the footer ------------->
 </body>
 
 </html>
